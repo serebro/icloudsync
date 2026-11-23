@@ -22,8 +22,11 @@ go build -o icloudsync .
 
 ```sh
 brew tap serebro/icloudsync https://github.com/serebro/icloudsync
+brew trust serebro/icloudsync
 brew install icloudsync
 ```
+
+Новые версии Homebrew не загружают формулы из стороннего tap, пока вы ему не доверяете (`Refusing to load formula ... from untrusted tap`). `brew trust serebro/icloudsync` это разрешает; чтобы доверять только этой формуле: `brew trust --formula serebro/icloudsync/icloudsync`.
 
 Либо `go install github.com/serebro/icloudsync@latest`, либо готовый бинарник со страницы [Releases](https://github.com/serebro/icloudsync/releases).
 
