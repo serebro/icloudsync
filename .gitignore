@@ -1,0 +1,18 @@
+# build output
+/icloudsync
+/dist/
+
+# runtime state and secrets
+session.json
+*.part
+trace*.txt
+*.log
+
+# editors / OS
+.DS_Store
+.idea/
+.vscode/
+
+# local tooling
+.remember/
+.claude/
