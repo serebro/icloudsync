@@ -36,24 +36,24 @@ brew install icloudsync
 
 ```sh
 # 1. Первый вход (интерактивно: пароль, затем 6-значный код с iPhone/Mac или по SMS)
-./icloudsync login --apple-id you@example.com
+icloudsync login --apple-id you@example.com
 
 # 2. Синхронизация (запускать сколько угодно раз)
-./icloudsync sync --dest /Volumes/Backup/icloud
+icloudsync sync --dest /Volumes/Backup/icloud
 
 # Только посмотреть, что изменится
-./icloudsync sync --dest /Volumes/Backup/icloud --dry-run
+icloudsync sync --dest /Volumes/Backup/icloud --dry-run
 
 # Свои альбомы: список и зеркалирование выбранных
-./icloudsync albums
-./icloudsync sync --dest /Volumes/Backup/icloud --only-photos --album "Семья" --album "Поездки/Рим"
+icloudsync albums
+icloudsync sync --dest /Volumes/Backup/icloud --only-photos --album "Семья" --album "Поездки/Рим"
 
 # Быстрый инкрементальный запуск: остановиться после 50 уже скачанных фото подряд
-./icloudsync sync --dest /Volumes/Backup/icloud --only-photos --until-found 50
+icloudsync sync --dest /Volumes/Backup/icloud --only-photos --until-found 50
 
 # Проверить сессию / выйти
-./icloudsync status
-./icloudsync logout
+icloudsync status
+icloudsync logout
 ```
 
 Флаги `sync`:
@@ -131,7 +131,7 @@ brew install icloudsync
 Запуск без человека не может ввести код 2FA, поэтому он завершается с кодом 3 и, если настроено, сообщает вам:
 
 ```sh
-./icloudsync sync --dest /Volumes/Backup/icloud \
+icloudsync sync --dest /Volumes/Backup/icloud \
   --notify-script ~/bin/icloud-alert.sh \
   --notify-email me@example.com --smtp-host smtp.example.com --smtp-username me@example.com
 ```

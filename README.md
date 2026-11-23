@@ -38,24 +38,24 @@ Requires Go 1.26+. macOS and Linux are supported.
 
 ```sh
 # 1. First sign-in (interactive: password, then a 6-digit code from your iPhone/Mac or via SMS)
-./icloudsync login --apple-id you@example.com
+icloudsync login --apple-id you@example.com
 
 # 2. Sync (run as often as you like)
-./icloudsync sync --dest /Volumes/Backup/icloud
+icloudsync sync --dest /Volumes/Backup/icloud
 
 # Only show what would change
-./icloudsync sync --dest /Volumes/Backup/icloud --dry-run
+icloudsync sync --dest /Volumes/Backup/icloud --dry-run
 
 # List your own albums, then mirror some of them
-./icloudsync albums
-./icloudsync sync --dest /Volumes/Backup/icloud --only-photos --album "Family" --album "Trips/Rome"
+icloudsync albums
+icloudsync sync --dest /Volumes/Backup/icloud --only-photos --album "Family" --album "Trips/Rome"
 
 # Fast incremental run: stop after 50 photos that are already up to date
-./icloudsync sync --dest /Volumes/Backup/icloud --only-photos --until-found 50
+icloudsync sync --dest /Volumes/Backup/icloud --only-photos --until-found 50
 
 # Check the session / sign out
-./icloudsync status
-./icloudsync logout
+icloudsync status
+icloudsync logout
 ```
 
 `sync` flags:
@@ -135,7 +135,7 @@ Common flags: `--apple-id` (`$ICLOUD_APPLE_ID`), `--session FILE` (`$ICLOUDSYNC_
 An unattended run cannot ask for a 2FA code, so it exits with code 3 and, if configured, tells you:
 
 ```sh
-./icloudsync sync --dest /Volumes/Backup/icloud \
+icloudsync sync --dest /Volumes/Backup/icloud \
   --notify-script ~/bin/icloud-alert.sh \
   --notify-email me@example.com --smtp-host smtp.example.com --smtp-username me@example.com
 ```
