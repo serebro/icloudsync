@@ -20,6 +20,13 @@ This project is not affiliated with or endorsed by Apple Inc. "iCloud" is a trad
 go build -o icloudsync .
 ```
 
+Homebrew (macOS and Linux):
+
+```sh
+brew tap serebro/icloudsync https://github.com/serebro/icloudsync
+brew install icloudsync
+```
+
 Or install with `go install github.com/serebro/icloudsync@latest`, or download a binary from the [Releases](https://github.com/serebro/icloudsync/releases) page.
 
 Requires Go 1.26+. macOS and Linux are supported.

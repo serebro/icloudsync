@@ -18,6 +18,13 @@ English version: [README.md](README.md).
 go build -o icloudsync .
 ```
 
+Через Homebrew (macOS и Linux):
+
+```sh
+brew tap serebro/icloudsync https://github.com/serebro/icloudsync
+brew install icloudsync
+```
+
 Либо `go install github.com/serebro/icloudsync@latest`, либо готовый бинарник со страницы [Releases](https://github.com/serebro/icloudsync/releases).
 
 Нужен Go 1.26+. Поддерживаются macOS и Linux.
